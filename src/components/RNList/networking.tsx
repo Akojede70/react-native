@@ -19,7 +19,7 @@ type Post = {
   };
   
 
-const App = () => {
+const Networking = () => {
   const [postList, setPostList] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -216,4 +216,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Networking;

@@ -1,19 +1,20 @@
+
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import SettingsScreen from "@/src/components/screens/SettingsScreen";
 import CourseListScreen from "@/src/components/screens/CourseList";
 import ProfileScreen from "@/src/components/screens/ProfileScreen";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { AboutStack } from "./AppStack";
+import  AboutStack  from "./AppStack";
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default function Tabs() {
   return (
-    <NavigationContainer>
+    // <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          //   tabBarShowLabel: false,
           tabBarLabelPosition: "below-icon",
           tabBarActiveTintColor: "purple",
         }}
@@ -33,10 +34,10 @@ export default function App() {
           name="About Stack"
           component={AboutStack}
           options={{
-            headerShown: false,
+            headerShown: false, // Disable header for AboutStack
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
+    //  </NavigationContainer>
   );
 }
